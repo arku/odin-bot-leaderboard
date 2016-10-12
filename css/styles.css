@@ -1,12 +1,15 @@
 body {
   background: #f9f9f9;
 }
-  .title {
+.title {
   font-weight: 300; 
 }
 .error {
   font-weight: 200;
   font-size: 20px;
+}
+.collection {
+  text-align: left;
 }
 .collection .collection-item.gold, .collection .collection-item.silver, .collection .collection-item.bronze {
   color: #fff;
@@ -34,11 +37,13 @@ body {
   color: #fff;
   top: 15px;
 }
+@media only screen and (min-width: 601px) {
+  .container {
+    width: 60%;
+  }
+}
 @media only screen and (min-width: 993px) {
   .container {
     width: 40%;
   }
-}
-.collection {
-  text-align: left;
 }
