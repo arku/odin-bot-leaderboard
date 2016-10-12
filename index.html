@@ -2,6 +2,7 @@
 <html ng-app="OdinLeaderboard">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odin Leaderboard</title>
     <link rel="stylesheet" href="css/materialize.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -31,7 +32,10 @@
           </div>
 
           <ul class="collection">
-            <li class="collection-item hoverable" ng-repeat="user in leaderboardCtrl.users" ng-class="{ 'gold': $index == 0, 'silver': $index == 1, 'bronze': $index == 2}">
+            <li class="collection-item hoverable valign-wrapper" ng-repeat="user in leaderboardCtrl.users" ng-class="{ 'gold': $index == 0, 'silver': $index == 1, 'bronze': $index == 2}">
+              <a ng-href="https://github.com/{{user.name}}" target="_blank">
+                <img src="img/octocat.png" alt="octocat"/>
+              </a>
               <span class="github-id"> {{ user.name }} </span> 
               <span class="points badge red"> {{ user.points }} </span>
             </li>

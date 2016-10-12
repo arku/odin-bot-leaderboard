@@ -1,4 +1,7 @@
-.title {
+body {
+  background: #f9f9f9;
+}
+  .title {
   font-weight: 300; 
 }
 .error {
@@ -17,12 +20,19 @@
 .collection .collection-item.bronze {
   background: #965A38;
 }
+.collection .collection-item {
+  margin-bottom: 2px;
+  position: relative;
+}
 .github-id {
   font-weight: 400;
+  font-size: 18px;
+  margin-left: 10px;
 }
 .points.badge.red {
   font-weight: 600;
   color: #fff;
+  top: 15px;
 }
 @media only screen and (min-width: 993px) {
   .container {
