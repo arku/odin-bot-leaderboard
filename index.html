@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="OdinLeaderboard">
+  <head>
+    <meta charset="utf-8">
+    <title>Odin Leaderboard</title>
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container" ng-controller="LeaderboardController as leaderboardCtrl">
+      <div class="row center-align">
+        <div class="col s12">
+          <h1 class="title">Odin Leaderboard</h1>
+          
+          <div class="error" ng-if="leaderboardCtrl.errorMessage">
+            {{ leaderboardCtrl.errorMessage }}
+          </div>
+          
+          <div class="preloader-wrapper active" ng-if="leaderboardCtrl.isLoading">
+            <div class="spinner-layer spinner-red-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div>
+              <div class="gap-patch">
+                <div class="circle"></div>
+              </div>
+              <div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+
+          <ul class="collection">
+            <li class="collection-item hoverable" ng-repeat="user in leaderboardCtrl.users" ng-class="{ 'gold': $index == 0, 'silver': $index == 1, 'bronze': $index == 2}">
+              <span class="github-id"> {{ user.name }} </span> 
+              <span class="points badge red"> {{ user.points }} </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

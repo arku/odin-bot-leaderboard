@@ -1,0 +1,34 @@
+.title {
+  font-weight: 300; 
+}
+.error {
+  font-weight: 200;
+  font-size: 20px;
+}
+.collection .collection-item.gold, .collection .collection-item.silver, .collection .collection-item.bronze {
+  color: #fff;
+}
+.collection .collection-item.gold {
+  background: #C98910;
+}
+.collection .collection-item.silver {
+  background: #A8A8A8;
+}
+.collection .collection-item.bronze {
+  background: #965A38;
+}
+.github-id {
+  font-weight: 400;
+}
+.points.badge.red {
+  font-weight: 600;
+  color: #fff;
+}
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 40%;
+  }
+}
+.collection {
+  text-align: left;
+}
